@@ -1,0 +1,23 @@
+<svg width="300" height="100" viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .text {
+      font-family: 'Arial', sans-serif;
+      font-weight: bold;
+      fill: #FFA500; /* Orange color */
+    }
+    .highlight {
+      fill: #FFFFFF; /* White color */
+    }
+    .umbrella {
+      fill: #FFA500; /* Orange color for the umbrella */
+    }
+  </style>
+  <defs>
+    <path id="umbrellaPath" d="M0 10 C5 0, 15 0, 20 10" stroke="none" fill="inherit" />
+  </defs>
+  <text x="10" y="50" class="text">T<tspan class="highlight">ech</tspan>
+    <tspan class="highlight" dx="5">S</tspan>tore
+  </text>
+  <use href="#umbrellaPath" x="6" y="20" class="umbrella" />
+  <use href="#umbrellaPath" x="65" y="20" class="umbrella" />
+</svg>

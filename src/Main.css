@@ -1,0 +1,120 @@
+@media (max-width: 600px) {
+  .ant-layout-content.css-dev-only-do-not-override-djtmh8 {
+    margin: 2px 2px !important;
+    padding: 0px !important;
+    min-height: 280px !important;
+    /* background: rgb(255, 255, 255); */
+    border-radius: 0px;
+  }
+
+  .ant-layout-sider.ant-layout-sider-dark.ant-layout-sider-collapsed.ant-layout-sider-has-trigger {
+    flex: 0 0 45px !important;
+    max-width: 45px !important;
+    min-width: 45px !important;
+    width: 45px !important;
+  }
+  .ant-layout-sider.ant-layout-sider-dark.ant-layout-sider-collapsed.ant-layout-sider-has-trigger
+    .ant-layout-sider-trigger {
+    width: 45px !important;
+  }
+  .ant-layout-sider.ant-layout-sider-dark.ant-layout-sider-has-trigger {
+    flex: 0 0 100px !important;
+    max-width: 100px !important;
+    min-width: 100px !important;
+    width: 100px !important;
+  }
+  .ant-layout-sider.ant-layout-sider-dark.ant-layout-sider-has-trigger
+    .ant-layout-sider-trigger {
+    width: 100px !important;
+  }
+  .ant-layout-sider.ant-layout-sider-dark.ant-layout-sider-has-trigger
+    .ant-menu-item:nth-child(1),
+  .ant-menu-item:nth-child(2),
+  .ant-menu-item:nth-child(3) {
+    padding-left: 10px !important;
+    text-align: center !important;
+  }
+
+  /* Video */
+  .MainContainer {
+    display: block !important;
+    position: relative;
+  }
+
+  .video-wrapper {
+    position: relative;
+    max-width: 100% !important;
+    height: auto !important;
+    margin: 2px 0px;
+    margin-right: 5px;
+  }
+
+  .video-wrapper > video {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box;
+    vertical-align: middle;
+    margin: 1px 4px 1px 2px !important;
+  }
+
+  .videoList-wrapper {
+    width: 99% !important;
+    height: 60vh !important;
+    position: fixed;
+    bottom: 0px;
+    justify-content: center;
+  }
+
+  .UploadfileButton {
+    position: absolute;
+
+    width: 90% !important;
+    padding: 20px;
+    margin: 0px 2px;
+    bottom: 2% !important;
+  }
+  .ant-list.ant-list-split.css-dev-only-do-not-override-djtmh8 {
+    margin: 30px 10px !important;
+
+    height: 50vh !important;
+    overflow: hidden !important;
+  }
+  .fileUploader {
+    width: 100% !important;
+  }
+
+  /* Header */
+  .ant-layout-header {
+    height: 40px !important;
+    width: 100%;
+  }
+
+  .ant-menu-light.ant-menu-horizontal > .ant-menu-item {
+    top: 1px;
+    margin-top: -14px !important;
+  }
+  .ant-btn.ant-btn-block {
+    width: 100% !important;
+  }
+  .ImageContainer {
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
+  }
+
+  .ant-row.css-dev-only-do-not-override-djtmh8 {
+    margin-left: 0px !important;
+  }
+  .Logo {
+    width: 250px !important;
+    position: absolute;
+    top: -20px !important;
+    left: 5px !important;
+  }
+  .LogoAtHome {
+    width: 313px !important;
+    position: absolute;
+    top: -17px !important ;
+    left: 5px !important;
+  }
+}

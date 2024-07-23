@@ -1,0 +1,16 @@
+.loginsvg {
+  width: 500px;
+  height: 450px;
+}
+.column {
+  min-height: 80vh !important;
+  display: flex;
+  justify-content: center; /* Centers content horizontally */
+  align-items: center; /* Centers content vertically */
+
+  box-sizing: border-box;
+}
+/* .logoimg {
+  width: 40px;
+  height: 30px;
+} */

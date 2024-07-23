@@ -1,0 +1,39 @@
+.ant-layout.ant-layout-sider.ant-menu {
+  margin-top: 70px;
+}
+.ant-layout .ant-layout-sider .ant-menu .ant-menu-item {
+  margin-top: 80px !important;
+}
+/* jkl */
+.buttongroups {
+  display: flex;
+  justify-content: space-between;
+}
+.ant-btn {
+  padding: 2px 25px !important;
+  border-radius: 0px !important;
+}
+.ant-layout .ant-layout-sider-trigger,
+.ant-menu-dark {
+  background: #000 !important;
+}
+.ant-layout-header .ant-menu {
+  line-height: inherit;
+  margin: 0px;
+  padding: 0px;
+  background: transparent;
+}
+.ant-layout .ant-layout-sider {
+  background: #000;
+}
+.ant-menu-light.ant-menu-horizontal > .ant-menu-item {
+  top: 1px;
+  margin-top: -5px;
+}
+.ant-avatar {
+  background: #d9d9d9 !important;
+}
+.LogoAtHome {
+  font-size: 20px;
+  width: 400px;
+}

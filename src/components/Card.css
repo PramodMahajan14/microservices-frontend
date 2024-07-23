@@ -21,7 +21,19 @@ h4 {
 }
 
 .bg-intro {
-  background: url("https://blueoasisdive.com/wp-content/uploads/2017/10/introdive.jpg")
-    no-repeat center center;
+  background: url("../../public/logo192.png") no-repeat center center;
   background-size: cover;
+  height: 150px;
+  width: 150px;
+  padding: 1px;
+  justify-items: center;
+}
+.commentbox {
+  position: sticky;
+  margin-top: 2px;
+}
+.comment-date {
+  font-family: "Lora", serif;
+  font-weight: 1;
+  font-size: 14px;
 }

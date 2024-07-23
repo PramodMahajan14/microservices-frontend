@@ -1,43 +1,31 @@
-#style-2::-webkit-scrollbar-track {
-  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  border-radius: 10px;
-  background-color: #f5f5f5;
+/* File Upload Modal */
+.ant-modal .ant-modal-footer {
+  visibility: hidden !important;
 }
-
-#style-2::-webkit-scrollbar {
-  width: 12px;
-  background-color: #f5f5f5;
+.ant-modal-content {
+  text-align: center !important;
 }
+.fileUploader {
+  width: auto;
 
-#style-2::-webkit-scrollbar-thumb {
-  border-radius: 10px;
-  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  background-color: #d62929;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  background: #fff;
+  padding: 15px 0;
+  margin: 0px 2px;
+  border-radius: 4px;
+  border: 2px dotted skyblue;
+  cursor: pointer;
 }
-header {
-  font-family: "Lobster", cursive;
-  text-align: center;
-  font-size: 25px;
-}
-
-#info {
-  font-size: 18px;
-  color: #555;
-  text-align: center;
-  margin-bottom: 25px;
-}
-
-a {
-  color: #074e8c;
-}
-
-.scrollbar {
-  height: 550px;
-
-  background: #f5f5f5;
-  overflow-y: scroll;
-}
-
-.force-overflow {
-  min-height: 650px;
+.uploadButton {
+  margin-top: 10px !important;
+  padding: 10px 20px !important;
+  background: skyblue !important;
+  cursor: pointer;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
 }
