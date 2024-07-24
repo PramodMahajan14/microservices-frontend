@@ -1,6 +1,7 @@
 import React, { useContext, useState } from "react";
 
 import { ReactComponent as Logo } from "../Images/logosvg.svg";
+import { ReactComponent as SmalLogo } from "../Images/MainLogo.svg";
 
 import "../index.css";
 
@@ -53,12 +54,19 @@ const HeaderFooter = ({ child }) => {
   };
 
   return (
-    <Layout style={{ minHeight: "100vh", overflow: "hidden" }}>
+    <Layout
+      style={{
+        minHeight: "100vh",
+        overflow: "hidden",
+        minWidth: "100%",
+        position: "fixed",
+      }}
+    >
       <Header style={{ color: "white", fontSize: "20px" }}>
         <Logo className="Logo" />
       </Header>
       <Content style={{ flex: 1 }}>{child}</Content>
-      <Footer style={{ textAlign: "center" }}>Footer</Footer>
+      <Footer style={{ textAlign: "center" }}>Copy @ 2024 TechStore.in</Footer>
     </Layout>
   );
 };

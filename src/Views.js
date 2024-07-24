@@ -25,7 +25,7 @@ const Views = () => {
       <Route path="/forgot/result" element={<ResultComponent />} />
       {/* <Route element={<PrivateRoutes />}> */}
       <Route path="/home" element={<Dashboard />} />
-      <Route path="/tem" element={<HeaderFooter />} />
+
       {/* </Route> */}
       <Route path="/successfulverified" element={<SuccessfulVerified />} />
       <Route path="/notfound" element={<Notfound />} />

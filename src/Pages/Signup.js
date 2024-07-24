@@ -12,10 +12,8 @@ import {
   Flex,
   message,
   Spin,
-  Layout,
   Row,
   Col,
-  Menu,
 } from "antd";
 
 import login from "../Images/undraw_undraw_undraw_undraw_sign_up_ln1s_-1-_s4bc_-1-_ee41_-1-_kf4d.svg";
@@ -27,7 +25,7 @@ import {
 } from "@ant-design/icons";
 import { AccountContext } from "../Context/AccountContext";
 import { ReactComponent as Logo } from "../Images/logosvg.svg";
-const { Header, Footer, Sider, Content } = Layout;
+import HeaderFooter from "../components/HeaderFooter";
 const { useToken } = theme;
 const { useBreakpoint } = Grid;
 const { Text, Title, Link } = Typography;
@@ -62,10 +60,7 @@ const Signup = () => {
         let data = await res.json();
         console.log(data);
         setloader(false);
-        // if (data === "undefined") {
-        //   error("InValid User");
-        //   return;
-        // }
+
         if (data.statuscode == 201) {
           setSentMail(false);
           return;
@@ -133,20 +128,10 @@ const Signup = () => {
     },
   };
   return (
-    <Layout style={{ minHeight: "100vh", overflow: "hidden" }}>
-      {contextHolder}
-      <Header
-        style={{
-          color: "white",
-          fontSize: "20px",
-          display: "flex",
-          justifyContent: "left",
-        }}
-      >
-        <Logo className="Logo" />
-      </Header>
-      <Content style={{ flex: 1 }}>
+    <HeaderFooter
+      child={
         <Row gutter={[16, 16]} style={{ minHeight: "100%", minWidth: "100%" }}>
+          {contextHolder}
           <Col xs={24} sm={24} md={12} lg={12} xl={12}>
             <div className="column">
               <div style={styles.container}>
@@ -271,13 +256,9 @@ const Signup = () => {
             </div>
           </Col>
         </Row>
-      </Content>
-      <Footer style={{ textAlign: "center" }}>copyright @ !PY</Footer>
-    </Layout>
+      }
+    />
   );
 };
 
 export default Signup;
-{
-  /* */
-}
