@@ -10,13 +10,18 @@ import {
   Typography,
   message,
   Spin,
-  Flex,
+  Col,
+  Row,
 } from "antd";
-
-import { LockOutlined, MailOutlined, UserOutlined } from "@ant-design/icons";
+import "../../index.css";
+import "../../Pages/Login.css";
+import { LockOutlined, MailOutlined, LockFilled } from "@ant-design/icons";
 import { AccountContext } from "../../Context/AccountContext";
 import "../../index.css";
-
+import HeaderFooter from "../../components/HeaderFooter";
+import forgot from "../../Images/undraw_account_re_o7id.svg";
+import { ReactComponent as SmallLogo } from "../../Images/MainLogo.svg";
+import { ReactComponent as SentMail } from "../../Images/undraw_mail_sent_re_0ofv.svg";
 const { useToken } = theme;
 const { useBreakpoint } = Grid;
 const { Text, Title, Link } = Typography;
@@ -74,14 +79,13 @@ const ForgotPassword = () => {
     container: {
       margin: "0 auto",
       padding: screens.md
-        ? `${token.paddingXL}px`
+        ? `${token.paddingXL - 20}px`
         : `${token.sizeXXL}px ${token.padding}px`,
       width: "380px",
     },
     footer: {
       marginTop: token.marginLG,
-      alignItems: "center",
-
+      textAlign: "center",
       width: "100%",
     },
     forgotPassword: {
@@ -89,6 +93,8 @@ const ForgotPassword = () => {
     },
     header: {
       marginBottom: token.marginXL,
+      display: "grid",
+      justifyContent: "center",
     },
     section: {
       alignItems: "center",
@@ -100,69 +106,105 @@ const ForgotPassword = () => {
     text: {
       color: token.colorTextSecondary,
     },
-    footertext: {
-      color: token.colorTextSecondary,
-    },
     title: {
       fontSize: screens.md ? token.fontSizeHeading2 : token.fontSizeHeading3,
     },
-    logo: {
-      height: "27px",
-      width: "27px",
-      marginLeft: "140px",
+    sentmail: {
+      marginBottom: token.marginXL,
+      display: "grid",
+      justifyContent: "center",
+      textAlign: "center",
     },
+    sentmailImg: {
+      width: "100%",
+      height: "250px",
+    },
+
+    // logo: {
+    //   height: "27px",
+    //   width: "27px",
+    //   marginLeft: "140px",
+    // },
   };
+
   return (
-    <section style={styles.section}>
-      {contextHolder}
+    <HeaderFooter
+      child={
+        <>
+          <Row gutter={[10]} style={{ minHeight: "100%", minWidth: "100%" }}>
+            {contextHolder}
 
-      <div style={styles.container}>
-        <div style={styles.header}>
-          {/* <Title style={styles.title}>Sign in</Title> */}
-          <Text style={styles.text}>
-            Welcome back to Microservices Please enter your Email Id
-          </Text>
-        </div>
-        <Form
-          name="normal_login"
-          initialValues={{
-            remember: true,
-          }}
-          onFinish={onFinish}
-          layout="vertical"
-          requiredMark="optional"
-        >
-          <Form.Item
-            name="email"
-            rules={[
-              {
-                type: "email",
-                required: true,
-                message: "Please input your Email!",
-              },
-            ]}
-          >
-            <Input prefix={<MailOutlined />} placeholder="Email" />
-          </Form.Item>
+            <Col
+              xs={23}
+              sm={12}
+              md={12}
+              lg={12}
+              xl={12}
+              style={styles.container}
+            >
+              <div className="column">
+                {true ? (
+                  <div style={styles.container}>
+                    <div style={styles.header}>
+                      <Text style={styles.text}>
+                        Enter the email address associated with your account and
+                        we'll send you a link to reset password.
+                      </Text>
+                    </div>
+                    <Form
+                      name="normal_login"
+                      initialValues={{
+                        remember: true,
+                      }}
+                      onFinish={onFinish}
+                      layout="vertical"
+                      requiredMark="optional"
+                    >
+                      <Form.Item
+                        name="email"
+                        rules={[
+                          {
+                            type: "email",
+                            required: true,
+                            message: "Please input your Email!",
+                          },
+                        ]}
+                      >
+                        <Input prefix={<MailOutlined />} placeholder="Email" />
+                      </Form.Item>
 
-          <Form.Item style={{ marginBottom: "0px" }}>
-            <Button block="true" type="primary" htmlType="submit">
-              {loader ? (
-                <div>
-                  <Spin size="small" className="spin" /> Please Wait
-                </div>
-              ) : (
-                "Log In"
-              )}
-            </Button>
-            <div style={styles.footer}>
-              <br />
-              <Link href="/forgot">Forgot Password</Link>
-            </div>
-          </Form.Item>
-        </Form>
-      </div>
-    </section>
+                      <Form.Item style={{ marginBottom: "0px" }}>
+                        <Button block="true" type="primary" htmlType="submit">
+                          {loader ? (
+                            <div>
+                              <Spin size="small" className="spin" /> Please Wait
+                            </div>
+                          ) : (
+                            "Continue"
+                          )}
+                        </Button>
+                        <div>
+                          Don't have an account?{" "}
+                          <Link href="/signup">Sign Up</Link>
+                        </div>
+                      </Form.Item>
+                    </Form>
+                  </div>
+                ) : (
+                  <div style={styles.sentmail}>
+                    <SentMail style={styles.sentmailImg} />
+                    <Text>
+                      We have sent link on mail Please check it and reset your
+                      password.
+                    </Text>
+                  </div>
+                )}
+              </div>
+            </Col>
+          </Row>
+        </>
+      }
+    />
   );
 };
 
